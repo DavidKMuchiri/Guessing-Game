@@ -84,7 +84,7 @@ class App extends Component{
         
                         <footer>
                             <h3>Game developed by MD</h3>
-                            <h5>Version 1.0.0</h5>
+                            <h5>Version 1.2.0</h5>
                         </footer>
                     </div>
                 </ErrorBoundary>

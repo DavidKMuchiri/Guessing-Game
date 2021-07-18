@@ -114,10 +114,12 @@ const run_guessing = () => {
         instructions(6);
         step = "restarting";
         inputVisibility = "hidden";
+        stopVisibility = "hidden";
     }else if ((guesses[0] !== secret_number) && (guess_counter === guess_limit)){
         instructions(7);
         step = "restarting";
         inputVisibility = "hidden";
+        stopVisibility = "hidden";
     }else {
         if(guess_counter > 0){
         }
@@ -157,6 +159,7 @@ export const game_reset = (choice) => {
         step = 1;
     }else {
         step = "stopping";
+        stopVisibility = "hidden";
     }
 }
 
