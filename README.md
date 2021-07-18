@@ -13,3 +13,7 @@ Tutorial for React To run the project:
 	3. Run npm install.
 
 	4. Run npm start.
+
+You can try the game at:
+
+	https://davidkmuchiri.github.io/Guessing-Game/
