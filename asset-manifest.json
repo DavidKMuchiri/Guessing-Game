@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Guessing-Game/static/css/main.0778508c.chunk.css",
-    "main.js": "/Guessing-Game/static/js/main.d42b6b4f.chunk.js",
-    "main.js.map": "/Guessing-Game/static/js/main.d42b6b4f.chunk.js.map",
+    "main.css": "/Guessing-Game/static/css/main.16051891.chunk.css",
+    "main.js": "/Guessing-Game/static/js/main.de30bf8e.chunk.js",
+    "main.js.map": "/Guessing-Game/static/js/main.de30bf8e.chunk.js.map",
     "runtime-main.js": "/Guessing-Game/static/js/runtime-main.e0f84d03.js",
     "runtime-main.js.map": "/Guessing-Game/static/js/runtime-main.e0f84d03.js.map",
     "static/js/2.fbb5f036.chunk.js": "/Guessing-Game/static/js/2.fbb5f036.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.8e29a274.chunk.js": "/Guessing-Game/static/js/3.8e29a274.chunk.js",
     "static/js/3.8e29a274.chunk.js.map": "/Guessing-Game/static/js/3.8e29a274.chunk.js.map",
     "index.html": "/Guessing-Game/index.html",
-    "static/css/main.0778508c.chunk.css.map": "/Guessing-Game/static/css/main.0778508c.chunk.css.map",
+    "static/css/main.16051891.chunk.css.map": "/Guessing-Game/static/css/main.16051891.chunk.css.map",
     "static/js/2.fbb5f036.chunk.js.LICENSE.txt": "/Guessing-Game/static/js/2.fbb5f036.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e0f84d03.js",
     "static/js/2.fbb5f036.chunk.js",
-    "static/css/main.0778508c.chunk.css",
-    "static/js/main.d42b6b4f.chunk.js"
+    "static/css/main.16051891.chunk.css",
+    "static/js/main.de30bf8e.chunk.js"
   ]
 }
