@@ -106,15 +106,14 @@
     outline: 0;
     border: 2px solid black;
     border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.25s;
+    transition: all 0.1s;
     max-width: max-content;
 }
 .mainBtn:hover, .stopBtn:hover{
     background: rgb(75, 75, 75);
     color: white;
 }
-.mainBtn:active, .stopBtn:active{
+.mainBtn:active, .stopBtn:focus{
     background: rgb(0, 0, 0);
     color: white;
 }
