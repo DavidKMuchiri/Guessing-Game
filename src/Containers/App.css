@@ -1,0 +1,136 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: max-content;
+    min-width: min-content;
+}
+.console{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loading{
+    padding: 5px;
+    margin: 20px;
+    border: 2px solid black;
+    animation: loading 1s infinite;
+}
+@keyframes loading{
+    25%{
+        border-right: rgb(0, 183, 255);
+    }
+    50%{
+        border-top: rgb(0, 183, 255);
+    }
+    75%{
+        border-left: rgb(0, 183, 255);
+    }
+    100%{
+        border-bottom: rgb(0, 183, 255);
+    }
+}
+.heading{
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    text-decoration-color: rgb(235, 233, 233);
+    font-size:  3.5rem;
+    margin: 20px;
+    cursor: default;
+    transition: all 1s;
+}
+.heading:hover{
+    color: rgb(235, 233, 233);
+    text-decoration-color: rgb(0, 0, 0);
+}
+.instructions{
+    word-wrap: break-word;
+    padding: 10px;
+    cursor: default;
+    border: 2px solid black;
+    margin: 10px;
+    max-width: 50rem;
+}
+.instructions h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:  1.2rem;
+}
+.control{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+}
+.controlInstructions{
+    word-wrap: break-word;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    border: 2px solid rgb(0, 0, 0);
+    max-width: 30rem;
+}
+.userInput input{
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 120%;
+    margin-bottom: 5px;
+    transition: all 0.1s;
+    border: 2px solid black;
+}
+.userInput input:focus{
+    color: white;
+    background-color: black;
+    box-shadow: 2px 7px 10px black;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mainBtn, .stopBtn{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 5px;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 10px rgb(0, 0, 0);
+    outline: 0;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.25s;
+    max-width: max-content;
+}
+.mainBtn:hover, .stopBtn:hover{
+    background: rgb(75, 75, 75);
+    color: white;
+}
+.mainBtn:active, .stopBtn:active{
+    background: rgb(0, 0, 0);
+    color: white;
+}
+footer{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: auto;
+}
+footer h3{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+footer h5{
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 1px 2px 3px rgb(0, 0, 0);
+}
