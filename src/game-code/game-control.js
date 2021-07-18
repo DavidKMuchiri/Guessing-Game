@@ -85,7 +85,7 @@ const run_QandA = () => {
             user_answer = Number(user_answer)
         }    
         answers.push(user_answer);
-        console.log(questions_set[0] ,answers[(answers.length - 1)]);
+        // console.log(questions_set[0] ,answers[(answers.length - 1)]);
         questions_set.shift();
     }
 
@@ -96,7 +96,7 @@ const run_QandA = () => {
     if (questions_set.length === 0){
         inputVisibility = "hidden";
         secret_number = secret_number_generator(answers);
-        console.log('Secret number: ', secret_number);
+        // console.log('Secret number: ', secret_number);
         step_in_guessing = 0;
         steps_to_guessing();
         step = "guessing";
@@ -127,8 +127,8 @@ const run_guessing = () => {
         instruction2 = `Guess ${guess_counter}`;
     }
 
-    console.log("Guesses: ", guesses);
-    console.log(guess_counter);
+    // console.log("Guesses: ", guesses);
+    // console.log(guess_counter);
 
 }
 
