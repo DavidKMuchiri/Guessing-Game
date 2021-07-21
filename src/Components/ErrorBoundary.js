@@ -1,6 +1,8 @@
 import React, { Component} from 'react';
 import './ErrorBoundary.css';
 
+// Since in production errors in code are not shown to the user, this class is used to catch these erros
+// and display that an error has been  found. This is what the user sees.
 class ErrorBoundary extends Component {
     constructor(props){
         super(props)

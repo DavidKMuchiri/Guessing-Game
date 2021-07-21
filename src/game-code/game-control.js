@@ -1,6 +1,3 @@
-// The Front-end-manipulation contains all the execution code the user is supposed to see and interacte with.
-// Its logic comes from the Front-end.js file which is still function when called.
-
 import { questions_storage, questions_generator, secret_number_generator } from './Back-end.js'
 
 let input = "";
@@ -22,11 +19,15 @@ let guess_limit = 3;
 // This store the user guesses. It can be changed but what if the user wants to see their guesses.
 let guesses = [];
 
+// The 5 variables are used to control what the user sees.
 let instruction1 = "";
 let instruction2="";
 let btnText = "";
 let inputVisibility = "hidden";
 let stopVisibility = "hidden";
+
+// This variable is checked whenever the user restarts the game so as to convey different instructions.
+let timesPlayed = 1;
 
 //The instruction_sets store the different instructions to be be presented to the user at different levels.
 const instructions = (set) => {
@@ -36,16 +37,19 @@ const instructions = (set) => {
         instruction2 = `Press Start`;
         btnText = `Start`;
     }else if (set === 2){
-        instruction1 = `How this works is that you have 3 questions to answer. From those
-        3 questions, your answers will be used to generate a secret whole number. You win by guessing that secret number.`;
+        instruction1 = `How this works is that you have to first answer 3 questions.`;
         instruction2 = `Press "Begin" to start the questions.`;
         btnText = `Begin`;
     }else if (set === 3){
-        instruction1 = `Answer the questions below`;
+        if (timesPlayed > 1){
+            instruction1 = `Welcome Back. Answer the questions below`;
+        }else{
+            instruction1 = `Answer the questions below`;
+        }
         btnText = `Enter Answer`;
     }else if (set === 4){
-        instruction1 = `Well done! Now it is time to guess. The secret number you have to guess is not greater 
-        than 10 and it is also not less than 0.`;
+        instruction1 = `Well done! From the answers you have given, a whole number not greater than 10 and also not
+        less than 0 is generated. You win by guessing that number. You have 3 guesses.`;
         instruction2 = `Guessing time`;
         btnText = `Start Guessing`;
     }else if (set === 5){
@@ -102,9 +106,7 @@ const run_QandA = () => {
         step = "guessing";
     }
 }
-
-// This is most complex function in this file of the game.
-// It just presens the guess number to the user and takes their input.
+// This function presents the guess number to the user and takes their input.
 // It also checks the input so as to convey if they have won, lost or needs to enter the next guess.
 const run_guessing = () => {
     if(guess_counter > 0){
@@ -150,13 +152,15 @@ const steps_to_guessing = () => {
 
 // This function does as its name states.
 export const game_reset = (choice) => {
+    timesPlayed = timesPlayed + 1;
     guesses = [];
     answers = [];
     questions_set = [];
     guess_counter = 0;
     inputVisibility = "hidden";
     if (choice === "restart"){
-        step = 1;
+        step = 3;
+        stopVisibility = "visible";
     }else {
         step = "stopping";
         stopVisibility = "hidden";

@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { Input } from '../Components/InputPlace.js';
+import Input from '../Components/InputPlace.js';
 import { game_control, game_reset} from '../game-code/game-control.js';
 import ErrorBoundary from '../Components/ErrorBoundary.js';
 import Buttons from '../Components/Buttons.js';
 import './App.css';
 
-
+// We use a class and not a function so as to use state to control the game.
+// The App controls the state and passes certain properties to different components of the game.
 class App extends Component{
     constructor(){
         super()
+    // Previous Instructions variable is used to for resetting the input box on click.
         this.state = {
             instructions: [],
             previousInstructions: [],
@@ -17,7 +19,13 @@ class App extends Component{
     }
 
     componentDidMount(){
-        this.setState({ instructions: game_control(this.state.input) });
+        setTimeout(
+            function() {
+                this.setState({ instructions: game_control(this.state.input) });
+            }
+            .bind(this),
+            1500
+        );
     }
     
     gameControl = () => {
@@ -41,7 +49,6 @@ class App extends Component{
         }
     }
     render(){
-
         if (this.state.instructions.length === 0){
             return(
                 <div>
@@ -55,6 +62,7 @@ class App extends Component{
                     <div className="body">
                         <div className="console">
                         <h1 className="heading">Guessing Game</h1>
+                        <h3 className="motto">simple fun</h3>
                         <div className="instructions">
                             <h2>
                                 {this.state.instructions[0]} 
@@ -84,7 +92,7 @@ class App extends Component{
         
                         <footer>
                             <h3>Game developed by MD</h3>
-                            <h5>Version 1.2.0</h5>
+                            <h5>Version 1.3.5</h5>
                         </footer>
                     </div>
                 </ErrorBoundary>

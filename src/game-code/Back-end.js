@@ -18,7 +18,7 @@ export const questions_storage = [
     `If I am holding a bee, what do I have in my eye?`,
     `What is next number in this sequence: 1, 11, 21, 1211, 111221, 312211,`,
     `How many spades are found in the standard deck of cards?`,
-    `If I tell you 'I am lying', am I (a)honest or (b)lying`
+    `If I tell you 'I am honestly lying', am I (a)being honest or (b)lying`
 ];
 
 // This function takes the list of questions given to it as all_questions then randomly chooses questions and returns them.

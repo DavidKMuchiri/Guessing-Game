@@ -1,5 +1,6 @@
 import React from 'react';
 
+// This functions is used to display buttons used in the game.
 const Buttons = ({gamecontrol, gamestop, text, stopvisibility}) => {
     return(
         <div className="buttons">

@@ -1,6 +1,7 @@
 import React from 'react';
 
-export const Input = ({ style, valueChange, reset }) => {
+// This function is used to display the input box and respond to different actions performed on it.
+const Input = ({ style, valueChange, reset }) => {
 
     return(
         <div>
@@ -13,3 +14,4 @@ export const Input = ({ style, valueChange, reset }) => {
         </div>
     );
 }
+export default Input;
