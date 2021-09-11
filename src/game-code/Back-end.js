@@ -96,3 +96,12 @@ export const secret_number_generator = (all_answers) => {
     finalNumber = finalNumber.toString();
     return finalNumber;
 }
+
+export function date_checker(){
+    let today = new Date();
+    let day = String(today.getDate());
+    let month = String(today.getMonth() + 1); //January is 0!
+
+    today = `${day}/${month}`;
+    return today;
+}

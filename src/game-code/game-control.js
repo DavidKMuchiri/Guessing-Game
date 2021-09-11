@@ -1,4 +1,4 @@
-import { questions_storage, questions_generator, secret_number_generator } from './Back-end.js'
+import { questions_storage, questions_generator, secret_number_generator, date_checker } from './Back-end.js'
 
 let input = "";
 // This array store the questions returned by the question_generator.
@@ -16,8 +16,10 @@ let secret_number = "0";
 let guess_counter = 0;
 // The guess_limit is used to control how many guesses the user can input.
 let guess_limit = 3;
-// This store the user guesses. It can be changed but what if the user wants to see their guesses.
+// This stores the user guesses. It can be changed but what if the user wants to see their guesses.
 let guesses = [];
+// This is used to store the current date of any day this game is being played.
+let date = 0;
 
 // The 5 variables are used to control what the user sees.
 let instruction1 = "";
@@ -25,6 +27,7 @@ let instruction2="";
 let btnText = "";
 let inputVisibility = "hidden";
 let stopVisibility = "hidden";
+let footer = "";
 
 // This variable is checked whenever the user restarts the game so as to convey different instructions.
 let timesPlayed = 1;
@@ -172,6 +175,8 @@ export const game_reset = (choice) => {
 // It controls all the different levels and steps the user and the game has to go through.
 export const game_control = (user_input) => {
     input = user_input;
+    date = date_checker();
+
     if (step === 1){
         instructions(1);
         step = 2;
@@ -195,13 +200,21 @@ export const game_control = (user_input) => {
         instructions(8);
     }
 
+    if(date === "18/9"){
+        footer = `**Happy birthday MD**`;
+
+    }else{
+        footer = "Game developed by MD";
+    }
+
     return(
         [
             instruction1,
             instruction2,
             btnText,
             inputVisibility,
-            stopVisibility
+            stopVisibility,
+            footer
         ]
     );
 
